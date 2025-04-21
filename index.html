@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<h3>1. Write a function that filters out negative numbers.</h3>");
+        let number = [-1, 2, -3, 4, -5, 6];
+        document.write("Original array: " + number + "<br>");
+        let positiveNumbers = number.filter(function (num) {
+            return num >= 0;
+        });
+        document.write("Positive numbers: " + positiveNumbers + "<br>");
+        // document.write("<p>Address : Government Engineering College Vaishali</p>");
+
+        document.write("<h3>2. Write a JavaScript function to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.</h3>");
+        function difference(num) {
+            if (num > 13) {
+                return (num - 13) * 2;
+            } else {
+                return 13 - num;
+            }
+        }
+        let num2 = 15;
+        document.write("Difference for 15 is " + difference(num2) + "<br>");
+
+        document.write("<h3>3. Write a function of Fibonacci series using JavaScript</h3>");
+        function fibonacci(n) {
+            let fib = [0, 1];
+            for (let i = 2; i < n; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            return fib;
+        }
+        let n = 10;
+        document.write("Fibonacci series of 10 is " + fibonacci(n) + "<br>");
+
+        document.write("<h3>4. Write a JavaScript program to sum the multiples of 3 and 5 under 1000 using function.</h3>");
+        function sumMultiplesOf3sAns5s(limit) {
+            let sum = 0;
+            for (let i = 0; i < limit; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+        document.write("Sum of multiples of 3 and 5 under 1000 is " + sumMultiplesOf3sAns5s(1000) + "<br>");
+
+        document.write("<h3>5. Write a program to return cube of a number using function object.</h3>")
+        function cube(num){
+            return num*num*num;
+        }
+        let num3 = 3;
+        document.write("Cube of " + num3 + " is " + cube(num3) + "<br>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
